@@ -1,0 +1,37 @@
+.body {
+	border-radius: 15px;
+	padding: 50px 50px;
+	margin: 100px auto 50px auto;
+	width: 80%;
+	background: url("../images/background.jpg");
+	/* .../ css folder s garaad zurag oruulhiin tuld ../ ashiglna*/
+}
+h1 {
+	text-align: center;
+	color: rgb(191, 55, 215);
+	font-family: "Roboto", sans-serif;
+	font-size: 50px;
+}
+h1:hover {
+	cursor: pointer;
+	color: rgb(21, 21, 238);
+}
+button {
+	background: rgb(62, 62, 235);
+	color: white;
+	/* box-shadow: 10px 5px 5px rgb(11, 11, 59); */
+	font-family: "Roboto", sans-serif;
+}
+button:hover {
+	cursor: pointer;
+	color: rgb(62, 62, 235);
+	background: white;
+	font-family: "Roboto", sans-serif;
+	font-size: bold;
+}
+#city {
+	text-transform: capitalize;
+}
+#city-input {
+	text-transform: capitalize;
+}
