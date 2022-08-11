@@ -5,7 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>My Weather App</title>
-		<link rel="stylesheet" href="src/style.css" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -26,8 +27,6 @@
 		></script>
 	</head>
 	<body class="bg-light bg-gradient">
-		<button id="clickMe1">Click me 1</button>
-		<button id="clickMe2">Click me 2</button>
 		<div class="body bg-success p-2 text-dark bg-opacity-25 shadow">
 			<h1 class="mt-5">Weather</h1>
 			<!--  ml-5 mr-5 mb-5 mx-5 my-12 -->
@@ -38,13 +37,14 @@
 						<form class="search-form" id="search-form">
 							<div class="input-group mb-3">
 								<input
-									type="text"
+									type="search"
 									class="form-control"
 									placeholder="Enter city"
 									aria-label="Recipient's username"
 									aria-describedby="basic-addon2"
 									id="city-input"
 								/>
+
 								<div class="input-group-append">
 									<button
 										id="submit-button"
@@ -67,8 +67,20 @@
 								</div>
 							</div>
 						</form>
+						<div class="col-3">
+							<button
+								class="btn btn-success w-100"
+								id="current-location-button"
+							>
+								Current📍
+							</button>
+						</div>
+						<br />
 						<h5 class="clearfix" id="date">Date Time</h5>
+						<br />
+						<h5 id="description">Weather description</h5>
 					</div>
+
 					<div class="col">
 						<div class="row">
 							<div class="col-2">
@@ -95,23 +107,27 @@
 							<div id="city" class="col-10 fs-1 text-center">
 								Temprature <br />
 								<span class="temperature" id="temperature"
-									>19</span
-								><span class="units">
-									<a href="#" id="celsius-link">°C</a> |
-									<a href="#" id="fahrenheit-link">°F</a>
-								</span>
+									>°C</span
+								>
 							</div>
 							<div class="col-6">
 								<ul>
-									<li>Precipitation: 0%</li>
-									<li>Humidity: 77%</li>
-									<li>Wind: 8 km/h</li>
+									<li>
+										Precipitation:
+										<span id="precipitation"> </span>
+									</li>
+									<li>
+										Humidity:
+										<span id="humidity"></span> %
+									</li>
+									<li>Wind: <span id="wind"></span>km/h</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 			<div
 				class="row fs-5 p-2 bg-primary text-white rounded-3 text-center mx-2"
 			>
@@ -126,50 +142,50 @@
 			<div class="row py-2 fs-6 text-center mx-2">
 				<div class="col">
 					<p class="fs-6">
-						Hi: 83* <br />
-						Lo: 55*
+						Hi: 83° <br />
+						Lo: 55°
 					</p>
 				</div>
 
 				<div class="col">
 					<p class="fs-6">
-						Hi: 83* <br />
-						Lo: 55*
+						Hi: 83° <br />
+						Lo: 55°
 					</p>
 				</div>
 
 				<div class="col">
 					<p class="fs-6">
-						Hi: 83* <br />
-						Lo: 55*
+						Hi: 83° <br />
+						Lo: 55°
 					</p>
 				</div>
 
 				<div class="col">
 					<p class="fs-6">
-						Hi: 83* <br />
-						Lo: 55*
+						Hi: 83° <br />
+						Lo: 55°
 					</p>
 				</div>
 
 				<div class="col">
 					<p class="fs-6">
-						Hi: 83* <br />
-						Lo: 55*
+						Hi: 83° <br />
+						Lo: 55°
 					</p>
 				</div>
 
 				<div class="col">
 					<p class="fs-6">
-						Hi: 83* <br />
-						Lo: 55*
+						Hi: 83° <br />
+						Lo: 55°
 					</p>
 				</div>
 
 				<div class="col">
 					<p class="fs-6">
-						Hi: 83* <br />
-						Lo: 55*
+						Hi: 83° <br />
+						Lo: 55°
 					</p>
 				</div>
 			</div>
